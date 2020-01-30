@@ -1,0 +1,14 @@
+--- gecko/widget/gonk/moz.build
++++ gecko/widget/gonk/moz.build
+@@ -100,11 +100,10 @@ if CONFIG['ANDROID_VERSION'] > '15':
+     LOCAL_INCLUDES += [
+         '%' + '%s/frameworks/native/opengl/include' % CONFIG['ANDROID_SOURCE'],
+     ]
+ 
+ LOCAL_INCLUDES += [
+     '%' + '%s/%s' % (CONFIG['ANDROID_SOURCE'], d) for d in [
+-	'device/softwinner/common/hardware/include',
+         'hardware/libhardware/include',
+         'hardware/libhardware_legacy/include',
+     ]
+ ]

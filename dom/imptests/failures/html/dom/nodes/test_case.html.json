@@ -1,0 +1,5 @@
+{
+  "getElementsByTagName abc": true,
+  "getElementsByTagName Abc": true,
+  "getElementsByTagName ABC": true
+}

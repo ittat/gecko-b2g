@@ -1,0 +1,26 @@
+EXPORTS.mozilla.dom.testapi+=[
+    'Testapi.h',
+    'TestapiChild.h',
+    'TestapiParent.h',
+]
+
+
+SOURCES +=[
+    'Testapi.cpp',
+    'TestapiChild.cpp',
+    'TestapiParent.cpp',
+]
+
+ 
+LOCAL_INCLUDES +=[
+  '/dom/testapi',
+]
+
+IPDL_SOURCES +=[
+  'ipc/PTestapi.ipdl',
+]
+
+ 
+include('/ipc/chromium/chromium-config.mozbuild')
+
+FINAL_LIBRARY ='xul'

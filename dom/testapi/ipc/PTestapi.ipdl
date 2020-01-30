@@ -1,0 +1,24 @@
+include protocol PContent;
+
+namespace mozilla {
+namespace dom {
+namespace testapi {
+
+sync protocol PTestapi {
+
+        //利用PContent来管理PAaaTest的生命周期，创建和销毁PAaaTest的实例
+  	 manager PContent;
+parent:
+
+    	//虚构函数
+        __delete__();
+        //parent 接收的消息
+ 	sync  SetTestData(nsString cmd) returns (nsString rv); 
+
+
+};
+
+}// namespace testapi
+}// namespace dom
+}// namespace mozilla
+
